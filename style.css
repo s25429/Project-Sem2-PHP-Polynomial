@@ -1,0 +1,130 @@
+body {
+    background-color: #eee;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 50px;
+}
+
+.hint {
+    display: inline-block;
+    border: 2px solid blue;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* Screen section */
+
+#screen {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 'yn y graph'
+                         '.  . x    '
+                         '.  . xn   ';
+}
+
+canvas#graph {
+    grid-area: graph;
+    background-color: white;
+    border: 2px solid #000;
+}
+
+canvas#y-units { grid-area: y }
+canvas#x-units { grid-area: x }
+
+#y-nums {
+    grid-area: yn;
+    flex-direction: column;
+    place-items: end;
+}
+#x-nums {
+    grid-area: xn;
+    flex-direction: row;
+    place-items: center;
+}
+
+#y-nums, #x-nums {
+    position: relative;
+    display: flex;
+}
+
+#y-nums * { padding: 0 .2em }
+
+.mid-num { position: absolute }
+
+#y-nums .top-num { transform: translateY(-8px) }
+
+#y-nums .bot-num {
+    margin-top: auto;
+    transform: translateY(8px);
+}
+
+#x-nums .top-num { transform: translateX(-4px) }
+
+#x-nums .bot-num {
+    margin-left: auto;
+    transform: translateX(4px);
+}
+
+
+/* Data section */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(0 0 0 / .03);
+}
+
+form #polynomial {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 30px;
+    padding: 12px 28px;
+}
+
+form #details {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+    padding: 12px 28px;
+    background-color: rgba(0 0 0 / .03);
+}
+
+form #polynomial .left,
+form #polynomial .right {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 5px;
+}
+
+form input[type="number"] {
+    width: 60px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 2px 0 4px 0;
+    background-color: gray;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .1s linear;
+    transition-property: background-color, color, border-color;
+}
+
+form input[type="submit"]:hover {
+    background-color: lightgray;
+    color: black;
+    border-color: gray;
+}
