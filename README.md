@@ -7,7 +7,6 @@
 * [Screenshots](#screenshots)
 * [Launching and Viewing](#launching-and-viewing)
 * [Project Status](#project-status)
-* [Contact](#contact)
 
 ## General Information
 A simple application made to visualise a polynomial function for *a* possibly having a maximum power of three. Any lower down to y = 0 will work as well.\
@@ -30,8 +29,3 @@ Whole project was coded in PHPStorm and class Data includes #[Pure] attribute. I
 
 ## Project Status
 Project is fully complete and there is nothing more from me to add to it. Although if any critical bugs would be found I would take my time to fix them so that the project is at least working adequately for its sole purpouse.
-
-## Contact
-Created by s25429 AKA [ThatHoracy](https://github.com/ThatHoracy), but currently posted on an account using school email (this one!)
-- Email: cezary.cislak@gmail.com
-- LinkedIn: [profile page](https://www.linkedin.com/in/cezary-ci%C5%9Blak-913559237/)
